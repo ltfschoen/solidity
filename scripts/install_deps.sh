@@ -167,7 +167,7 @@ case $(uname -s) in
 
             Debian)
                 #Debian
-		install_z3=""
+                install_z3=""
                 case $(lsb_release -cs) in
                     wheezy)
                         #wheezy
@@ -186,19 +186,19 @@ case $(uname -s) in
                     stretch)
                         #stretch
                         echo "Installing solidity dependencies on Debian Stretch (9.x)."
-		        install_z3="libz3-dev"
+                        install_z3="libz3-dev"
                         ;;
                     buster)
                         #buster
                         echo "Installing solidity dependencies on Debian Buster (10.x)."
-		        install_z3="libz3-dev"
+                        install_z3="libz3-dev"
                         ;;
                     *)
                         #other Debian
                         echo "Installing solidity dependencies on unknown Debian version."
                         echo "ERROR - This might not work, but we are trying anyway."
                         echo "Drop us a message at https://gitter.im/ethereum/solidity-dev"
-		        install_z3="libz3-dev"
+                        install_z3="libz3-dev"
                         ;;
                 esac
 
@@ -268,7 +268,7 @@ case $(uname -s) in
 
             Ubuntu)
                 #Ubuntu
-		install_z3=""
+                install_z3=""
                 case $(lsb_release -cs) in
                     trusty)
                         #trusty
@@ -289,24 +289,24 @@ case $(uname -s) in
                     xenial)
                         #xenial
                         echo "Installing solidity dependencies on Ubuntu Xenial Xerus (16.04)."
-		        install_z3="libz3-dev"
+                        install_z3="libz3-dev"
                         ;;
                     yakkety)
                         #yakkety
                         echo "Installing solidity dependencies on Ubuntu Yakkety Yak (16.10)."
-		        install_z3="libz3-dev"
+                        install_z3="libz3-dev"
                         ;;
                     zesty)
                         #zesty
                         echo "Installing solidity dependencies on Ubuntu Zesty (17.04)."
-		        install_z3="libz3-dev"
+                        install_z3="libz3-dev"
                         ;;
                     *)
                         #other Ubuntu
                         echo "ERROR - Unknown or unsupported Ubuntu version (" $(lsb_release -cs) ")"
                         echo "ERROR - This might not work, but we are trying anyway."
                         echo "We only support Trusty, Utopic, Vivid, Wily, Xenial and Yakkety."
-		        install_z3="libz3-dev"
+                        install_z3="libz3-dev"
                         ;;
                 esac
 
