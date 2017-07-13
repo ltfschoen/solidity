@@ -95,10 +95,7 @@ set<SourceUnit const*> SourceUnit::referencedSourceUnits(bool _flatten, set<Sour
 			_skipList.insert(sourceUnit);
 			sourceUnits.insert(sourceUnit);
 			if (_flatten)
-			{
-				set<SourceUnit const*> referencedSourceUnits = sourceUnit->referencedSourceUnits(true, _skipList);
-				sourceUnits.insert(referencedSourceUnits.begin(), referencedSourceUnits.end());
-			}
+				sourceUnits += sourceUnit->referencedSourceUnits(true, _skipList);
 		}
 	}
 	return sourceUnits;
