@@ -151,7 +151,7 @@ inline std::string formatNumber(bigint const& _value)
 	if (_value < 0)
 		return "-" + formatNumber(-_value);
 	if (_value > 0x1000000)
-		return toHex(toCompactBigEndian(_value));
+		return toHex(toCompactBigEndian(_value), 2, HexPrefix::Add);
 	else
 		return _value.str();
 }
