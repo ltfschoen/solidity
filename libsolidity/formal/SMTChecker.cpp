@@ -45,7 +45,7 @@ void SMTChecker::analyze(SourceUnit const& _source)
 	bool pragmaFound = false;
 	for (auto const& node: _source.nodes())
 		if (auto const* pragma = dynamic_cast<PragmaDirective const*>(node.get()))
-			if (pragma->literals()[0] == "checkAssertionsZ3")
+			if (pragma->literals()[0] == "checkAssertions")
 				pragmaFound = true;
 	if (pragmaFound)
 	{
