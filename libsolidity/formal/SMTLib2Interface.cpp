@@ -34,6 +34,7 @@
 
 using namespace std;
 using namespace dev;
+using namespace dev::solidity;
 using namespace dev::solidity::smt;
 
 SMTLib2Interface::SMTLib2Interface(ReadCallback::Callback const& _queryCallback):
