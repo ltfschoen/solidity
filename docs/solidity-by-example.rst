@@ -363,7 +363,7 @@ be blinded in Ethereum, anyone can see the value.
 
 The following contract solves this problem by
 accepting any value that is at least as large as
-the bid. Since this can of course only be checked during
+the highest bid. Since this can of course only be checked during
 the reveal phase, some bids might be **invalid**, and
 this is on purpose (it even provides an explicit
 flag to place invalid bids with high value transfers):
